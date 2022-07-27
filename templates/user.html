@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{% block title %} Informações do Usuário {% endblock %}</h1>
+
+<ul>
+    <li>Nome: {{user.name}}</li>
+
+    <li>Sobrenome: {{user.last_name}}</li>
+
+    <li>CEP: {{user.cep}}</li>
+
+    <li>Logradouro: {{user.address.logradouro}}</li>
+
+    <li>Bairro: {{user.address.bairro}}</li>
+
+    <li>Localidade: {{user.address.localidade}}</li>
+
+    <li>UF: {{user.address.uf}}</li>
+
+</ul>
+
+<a href="/create">Voltar</a>
+
+{% endblock %}
